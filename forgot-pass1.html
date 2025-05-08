@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="Styles/forgot-pass-style.css" />
+  <title>Forget Password</title>
+</head>
+<body>
+  <div class="background"></div>
+
+  <div class="edit-pass">
+    <div class="left-side">
+      <p>Forget Password</p>
+    </div>
+
+    <div class="right-side">
+      <p id="paragraph">Please enter your email to send you the verification code.</p>
+      <label class="label" for="email">Email</label>
+      <div class="content">
+        <input class="bars" type="email" id="email" placeholder="Enter Your Email" required />
+        <div class="all-buttons1">
+          <button id="back-button" type="button" onclick="goBack()">Back</button>
+          <button id="save-button" type="button" onclick="sendVerification()">Send</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="message" id="pop-up-Message"></div>
+  <script src="Scripts/functions-page1&2.js"></script>
+</body>
+</html>

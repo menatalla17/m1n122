@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="Styles/menu-style.css">
+    <title>Golden Gourmet</title>
+</head>
+<body>
+    <div class="container">
+      <nav>
+        <div class="logocont">
+          <img class="logo" src="icons/logo1.svg" alt="Logo">
+          <p>Golden Gourmet</p>
+        </div>
+
+        <div class="pages">
+          <ul class="list">
+            <li><a href="#deals" class="link">Deals</a></li>
+            <li><a href="#Menu" class="link">Menu</a></li>
+            <li><a href="#contactUs" class="link">Contact Us</a></li>
+        </ul>
+        </div>
+        <div class="cart-bars">
+          <div class="cart-icon" onclick="toggleCart()" >
+            <img src="icons/cart.svg" alt="cart" style="cursor: pointer; width: 40px;">
+          </div>
+
+          <div id="cart-list" class="cart hidden">
+            <div class="cart-header">
+              <h2>My Cart</h2>
+              <button onclick="toggleCart()" class="close-btn">✖</button>
+            </div>
+          <hr>
+            <div class="cart-items"></div>
+            <button class="pay" style="margin-top: 20px;" onclick="goToCheckOut()">checkout</button>
+          </div>
+          
+          <div id="overlay" class="hidden"></div>
+
+        <!-- Bar Icon -->
+        <div class="bar-container">
+          <img src="icons/bars-icon.svg" id="bar-icon" class="pfp" style="cursor: pointer; width: 40px;">
+        </div>
+
+        <!-- Profile Popup -->
+        <div id="profile-popup" class="popup">
+          <button id="close-btn">✖</button>
+          <div class="popup-content">
+            <img src="images/profile-pic1.jpg" alt="Profile Picture" class="profile-pic" style="width: 135px; height: 135px;">
+            <br>
+            <button class="edit-btn" style="margin-right: 10px;" onclick="goToProfile()">Edit</button>
+            <br>
+            <div class="popup-links">
+              <a href="settings.html">settings</a>
+            </div>
+          </div>
+        </div>
+
+        </div>
+    </nav>
+        <section>
+            <div style="background-image: url(images/backgroundimg.jpg);" class="text">
+                <h1>Pizza is always the answer</h1>
+                <p style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; margin-left: 10px;">No matter the question, we’ve got the perfect slice.
+                    Fresh ingredients, melty cheese, and that crispy crust you crave.</p>
+            </div>
+        </section>
+        <main>
+            <div class="deals" id="deals">
+                <h1>Deals</h1>
+                <div class="cards-container">
+                  
+                  <div class="card" id="deals-card">
+                    <div class="card-image">
+                      <img src="images/truffle_mushroom_pizza.jpg" alt="truffle_mushroom_pizza">
+                    </div>
+                    <div class="card-info">
+                      <h2>Truffle Mushroom Pizza</h2>
+                      <p>Rich and indulgent.
+                        White sauce, mushrooms, truffle oil, and fresh herbs.</p>
+                      <div class="bottom-info">
+                        <div class="deals-price">
+                          <span class="old-price">$28.45</span>
+                          <span class="price">$21.99</span>
+                        </div>
+                        <span class="stars">★★★★☆</span>
+                      </div>
+                    </div>
+                  </div>
+              
+                  <div class="card" id="deals-card">
+                    <div class="card-image">
+                      <img src="images/buffalo-chicken.webp" alt="buffalo-chicken">
+                    </div>
+                    <div class="card-info">
+                      <h2>Buffalo Chicken Pizza</h2>
+                      <p>Spicy buffalo-sauce-marinated chicken, gooey cheese,
+                        and a ranch drizzle for that perfect kick.</p>
+                      <div class="bottom-info">
+                        <div class="deals-price">
+                          <span class="old-price">$20.35</span>
+                          <span class="price">$18.75</span>
+                        </div>
+                        <span class="stars">★★★★★</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card" id="deals-card">
+                    <div class="card-image">
+                      <img src="images/Meat-lovers.jpeg" alt="Meat-lovers">
+                    </div>
+                    <div class="card-info">
+                      <h2>Meat Lover’s Pizza</h2>
+                      <p>A carnivore’s dream.<br>Pepperoni, sausage, ham, beef, and bacon on a cheesy base.</p>
+                      <div class="bottom-info">
+                        <div class="deals-price">
+                          <span class="old-price">$23.25</span>
+                          <span class="price">$19.99</span>
+                        </div>
+                        <span class="stars">★★★★☆</span>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+            </div>
+            <div class="top_dishes">
+                <h1>Top Dishes</h1>
+                <div class="cards-container">
+                  
+                  <div class="card">
+                    <div class="card-image">
+                      <img src="images/margherita.webp" alt="Margherita">
+                    </div>
+                    <div class="card-info">
+                      <h2>Margherita Pizza</h2>
+                      <p>Classic delight with fresh mozzarella, basil, and tomato sauce.</p>
+                      <div class="bottom-info">
+                        <span class="price">$12.99</span>
+                        <span class="stars">★★★★★</span>
+                      </div>
+                    </div>
+                  </div>
+              
+                  <div class="card">
+                    <div class="card-image">
+                      <img src="images/pepperoni_pizza.jpg" alt="Pepperoni">
+                    </div>
+                    <div class="card-info">
+                      <h2>Pepperoni Pizza</h2>
+                      <p>The all-time classic.Mozzarella, tomato sauce, and spicy pepperoni on a golden crust.</p>
+                      <div class="bottom-info">
+                        <span class="price">$16.99</span>
+                        <span class="stars">★★★★★</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <div class="card-image">
+                      <img src="images/BBQ pizza.jpg" alt="BBQ Chicken">
+                    </div>
+                    <div class="card-info">
+                      <h2>BBQ Chicken Pizza</h2>
+                      <p>Sweet, smoky, and savory. <br>Grilled chicken, red onions, BBQ sauce, and melted cheese.</p>
+                      <div class="bottom-info">
+                        <span class="price">$20.99</span>
+                        <span class="stars">★★★★★</span>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            <div class="Menu" id="Menu">
+              <span style="text-align: center; padding: 40px;">
+                <h1 style="color: white; font-size: 60px;">Menu</h1>
+              </span>
+                <div class="pizza-menu">
+                  <div id="pepperoni-id" class="pizza-card">
+                    <div class="pizza-img">
+                      <img src="images/pepperoni_pizza.jpg" alt="Pepperoni Pizza">
+                    </div>
+                    <div class="pizza-info">
+                      <h3>Pepperoni Pizza</h3>
+                      <p>Spicy pepperoni with mozzarella & tomato sauce</p>
+                      <span class="price">$16.99</span>
+                      <div class="rating">⭐⭐⭐⭐☆</div>
+                      <button class="add-to-cart-btn">
+                        <span class="btn-text">Add to Cart</span>
+                      </button>
+                    </div>
+                  </div>
+                
+                  <div class="pizza-card">
+                    <div class="pizza-img">
+                      <img src="images/margherita.webp" alt="Margherita Pizza">
+                    </div>
+                    <div class="pizza-info">
+                      <h3>Margherita Pizza</h3>
+                      <p>Classic mozzarella, basil & tomato</p>
+                      <span class="price">$12.99</span>
+                      <div class="rating">⭐⭐⭐⭐⭐</div>
+                      <button class="add-to-cart-btn">
+                        <span class="btn-text">Add to Cart</span>
+                    </div>
+                  </div>
+                
+                  <div class="pizza-card">
+                    <div class="pizza-img">
+                      <img src="images/BBQ pizza.jpg" alt="BBQ Chicken Pizza">
+                    </div>
+                    <div class="pizza-info">
+                      <h3>BBQ Chicken Pizza</h3>
+                      <p>Grilled chicken, BBQ sauce & onions</p>
+                      <span class="price">$18.99</span>
+                      <div class="rating">⭐⭐⭐⭐☆</div>
+                      <button class="add-to-cart-btn">
+                        <span class="btn-text">Add to Cart</span>
+                    </div>
+                  </div>
+
+                  <div class="pizza-card">
+                    <div class="pizza-img">
+                      <img src="images/fourcheesepizza.jpg" alt="fourcheesepizza">
+                    </div>
+                    <div class="pizza-info">
+                      <h3>Four Cheese Pizza</h3>
+                      <p>Cheesy overload, in the best way.<br>Mozzarella, parmesan, cheddar, and gorgonzola.</p>
+                      <span class="price">$17.99</span>
+                      <div class="rating">⭐⭐⭐⭐☆</div>
+                      <button class="add-to-cart-btn">
+                        <span class="btn-text">Add to Cart</span>
+                    </div>
+                  </div>
+
+                  <div class="pizza-card">
+                    <div class="pizza-img">
+                      <img src="images/Meat-lovers.jpeg" alt="Meet-lovers">
+                    </div>
+                    <div class="pizza-info">
+                      <h3>Meat Lover’s Pizza</h3>
+                      <p>A carnivore’s dream.<br>Pepperoni, sausage, ham, beef, and bacon on a cheesy base.</p>
+                      <span class="price">$19.99</span>
+                      <div class="rating">⭐⭐⭐⭐☆</div>
+                      <button class="add-to-cart-btn">
+                        <span class="btn-text">Add to Cart</span>
+                    </div>
+                  </div>
+
+                  <div class="pizza-card">
+                    <div class="pizza-img">
+                      <img src="images/truffle_mushroom_pizza.jpg" alt="Meet-lovers">
+                    </div>
+                    <div class="pizza-info">
+                      <h3>Truffle Mushroom Pizza</h3>
+                      <p>Rich and indulgent. <br>
+                        White sauce, mushrooms, truffle oil, and fresh herbs.</p>
+                      <span class="price">$21.99</span>
+                      <div class="rating">⭐⭐⭐⭐☆</div>
+                      <button class="add-to-cart-btn">
+                        <span class="btn-text">Add to Cart</span>
+                    </div>
+                  </div>
+
+                  <div class="pizza-card">
+                    <div class="pizza-img">
+                      <img src="images/hawaiian_pizza.jpg" alt="huwaiian">
+                    </div>
+                    <div class="pizza-info">
+                      <h3>Hawaiian Pizza</h3>
+                      <p>Love it or hate it, it’s a classic. <br>
+                        Ham, pineapple, mozzarella, and tomato sauce.</p>
+                      <span class="price">$16.99</span>
+                      <div class="rating">⭐⭐⭐☆☆</div>
+                      <button class="add-to-cart-btn">
+                        <span class="btn-text">Add to Cart</span>
+                    </div>
+                  </div>
+
+                  <div class="pizza-card">
+                    <div class="pizza-img">
+                      <img src="images/veggie-supreme.png" alt="veggie-supreme">
+                    </div>
+                    <div class="pizza-info">
+                      <h3>Veggie Supreme Pizza</h3>
+                      <p>Colorful and full of crunch. <br>
+                        Bell peppers, onions, mushrooms, olives, and sweet corn.</p>
+                      <span class="price">$15.99</span>
+                      <div class="rating">⭐⭐⭐☆☆</div>
+                      <button class="add-to-cart-btn">
+                        <span class="btn-text">Add to Cart</span>
+                    </div>
+                  </div>
+
+                  <div class="pizza-card">
+                    <div class="pizza-img">
+                      <img src="images/pesto-veggie.png" alt="pesto-veggie">
+                    </div>
+                    <div class="pizza-info">
+                      <h3>Pesto Veggie Pizaa</h3>
+                      <p>A fresh basil pesto base topped with sun-dried tomatoes,
+                         artichoke hearts, and peppery arugula.</p>
+                      <span class="price">$15.50</span>
+                      <div class="rating">⭐⭐☆☆☆</div>
+                      <button class="add-to-cart-btn">
+                        <span class="btn-text">Add to Cart</span>
+                    </div>
+                  </div>
+
+                  <div class="pizza-card">
+                    <div class="pizza-img">
+                      <img src="images/spinach&feta.webp" alt="spinach&feta">
+                    </div>
+                    <div class="pizza-info">
+                      <h3>Spinach&Feta Pizza</h3>
+                      <p>Creamy feta, sautéed spinach, black olives,
+                         and red onions over a garlic-infused olive oil base.</p>
+                      <span class="price">$15.50</span>
+                      <div class="rating">⭐⭐⭐☆☆</div>
+                      <button class="add-to-cart-btn">
+                        <span class="btn-text">Add to Cart</span>
+                    </div>
+                  </div>
+
+                  <div class="pizza-card">
+                    <div class="pizza-img">
+                      <img src="images/spicy-italian.png" alt="spicy-italian">
+                    </div>
+                    <div class="pizza-info">
+                      <h3>Spicy ItalianPizza</h3>
+                      <p>Fiery and bold – spicy salami,
+                         jalapeños, chili flakes, and mozzarella on tomato sauce.
+                      </p>
+                      <span class="price">$16.55</span>
+                      <div class="rating">⭐⭐⭐⭐☆</div>
+                      <button class="add-to-cart-btn">
+                        <span class="btn-text">Add to Cart</span>
+                    </div>
+                  </div>
+
+                  <div class="pizza-card">
+                    <div class="pizza-img">
+                      <img src="images/buffalo-chicken.webp" alt="buffalo-chicken">
+                    </div>
+                    <div class="pizza-info">
+                      <h3>Buffalo Chicken Pizza</h3>
+                      <p>Spicy buffalo-sauce-marinated chicken, gooey cheese,
+                         and a ranch drizzle for that perfect kick.
+                      </p>
+                      <span class="price">$18.75</span>
+                      <div class="rating">⭐⭐⭐⭐⭐</div>
+                      <button class="add-to-cart-btn">
+                        <span class="btn-text">Add to Cart</span>
+                    </div>
+                  </div>
+
+                  <div class="pizza-card">
+                    <div class="pizza-img">
+                      <img src="images/Mediterranean-Veggie.jpg" alt="Mediterranean-Veggie">
+                    </div>
+                    <div class="pizza-info">
+                      <h3>Mediterranean Veggie Pizza</h3>
+                      <p>Fresh & Colorful – Bell peppers, black olives, <br>
+                         cherry tomatoes, red onions, and feta on a garlic olive oil base.
+                      </p>
+                      <span class="price">$30.45</span>
+                      <div class="rating">⭐⭐⭐☆☆</div>
+                      <button class="add-to-cart-btn">
+                        <span class="btn-text">Add to Cart</span>
+                    </div>
+                  </div>
+
+                  <div class="pizza-card">
+                    <div class="pizza-img">
+                      <img src="images/spice-pepperoni & jalpino.png" alt="spicy pepperoni & jalapeños">
+                    </div>
+                    <div class="pizza-info">
+                      <h3>Spicy Pepperoni & Jalapeño Pizza</h3>
+                      <p>Bold & Fiery – Classic pepperoni layered with jalapeños <br>
+                         and chili flakes for a spicy kick.</p>
+                      <span class="price">$34.20</span>
+                      <div class="rating">⭐⭐⭐⭐☆</div>
+                      <button class="add-to-cart-btn">
+                        <span class="btn-text">Add to Cart</span>
+                    </div>
+                  </div>
+
+                  <div class="pizza-card">
+                    <div class="pizza-img">
+                      <img src="images/chicken-alfreddo.jpg" alt="chicken-alfreddo">
+                    </div>
+                    <div class="pizza-info">
+                      <h3>Chicken Alfredo Pizza</h3>
+                      <p>Creamy & Comforting – Alfredo sauce, grilled chicken,
+                         mushrooms, and mozzarella with a touch of parsley.</p>
+                      <span class="price">$26.75</span>
+                      <div class="rating">⭐⭐⭐⭐☆</div>
+                      <button class="add-to-cart-btn">
+                        <span class="btn-text">Add to Cart</span>
+                    </div>
+                  </div>
+
+                </div>
+              
+                </div>
+        </main>
+        <footer>
+            <div class="contactUs" id="contactUs" style="color: white;">
+                <h1>Contact Us</h1>
+                <ul class="contact-Us-elements" style="padding: 0px;">
+                  <li style="font-size: 25px;" class="img-p">
+                    <img src="icons/email-icon.svg" alt="email-icon" style="width: 50px;">
+                    <p>goldengourmet@gmail.com</p>
+                  </li>
+                  <li style="font-size: 25px;" class="img-p">
+                    <img src="icons/phone-icon.svg" alt="phone-icon" style="width: 50px;">
+                    <p>+24 56 89 146</p>
+                  </li>
+                  <li style="font-size: 25px;" class="img-p">
+                    <img src="icons/location-icon (2).svg" alt="location-icon" style="width: 50px;">
+                    <p>12 El Gaish Road, San Stefano, Alexandria, Egypt</p>
+                  </li>
+                  <br>
+                  <li class="img-p">
+                    <div class="icons">
+                      <a href="https://www.facebook.com" class="icon icon-facebook">
+                        <img src="icons/facebook-icon.svg" alt="facebook-icon" style="width: 35px;">
+                      </a>
+                      <a href="https://www.instagram.com" class="icon icon-instagram">
+                        <img src="icons/instagram-icon.svg" alt="instagram-icon" style="width: 35px;">
+                      </a>
+                      <a href="https://www.twitter.com" class="icon icon-twitter">
+                        <img src="icons/twitter-icon.svg" alt="twitter-icon" style="width: 35px;">
+                      </a>
+                    </div>
+                  </li>
+                </ul>
+            </div>
+            <div class="AboutUs" style="color: white; margin-bottom: 330px;">
+                <h1>About us</h1>
+                <p style="font-size: 20px;">At Golden Gourmet, pizza is our passion. <br>
+                    We craft high-quality, homemade-style pizzas with fresh ingredients, <br>
+                    from hand-tossed dough to slow-cooked sauces. <br>
+                    Wether you dine in, take out, or order online, we're here to serve you a slice of happiness.
+                    </p>
+            </div>
+        </footer>
+    </div>
+    <script src="Scripts/menu-script.js"></script>
+</body>
+</html>

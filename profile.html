@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Styles/profile-style.css">
+    <title>Profile</title>
+</head>
+<body>
+    <button class="back-btn" onclick="goBack()">←</button>
+    <br>
+        <div class="user-info">
+            <div class="pfp-input">
+                <img class="prof_photo" src="images/download.jpg" alt="profile_photo" style="margin-right: 20px;">
+                <div class="upload-section">
+                    <label for="fileInput" class="custom-file-upload">Choose Image</label>
+                    <input id="fileInput" class="inp" type="file" style="display: none;">
+                </div>
+            </div>
+                <div class="username-section">
+                    <span id="username-text">Username</span>
+                    <input type="text" id="username-input" style="display:none;">
+                    <button id="edit-btn" onclick="editUsername()">Edit</button>
+                    <button id="save-btn" onclick="saveUsername()" style="display:none;">Save</button>
+                </div>
+        </div>
+    <hr>
+    <h1 style="color: white; margin-left: 70px;">Latest Orders</h1>
+    <div class="container"></div>
+    <script src="Scripts/profile-dynamic.js"></script>
+</body>
+</html>

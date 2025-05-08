@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Settings</title>
+  <link rel="stylesheet" href="Styles/settings-style.css" />
+</head>
+<body class="dark"> <!-- Default dark mode -->
+  <div class="container">
+    <div class="header">
+      <button class="back-btn">← Back</button>
+      <h1>Settings</h1>
+    </div>
+
+    <!-- Appearance Section -->
+    <div class="section">
+      <div class="section-title">
+        👁️ Appearance
+        <button class="toggle-btn">v</button>
+      </div>
+      <div class="section-content hidden">
+        <button id="lightModeBtn">Light Mode</button>
+        <button id="darkModeBtn">Dark Mode</button>
+
+        <h4>Language:</h4>
+        <label><input type="radio" name="language" value="English" checked /> English</label><br />
+        <label><input type="radio" name="language" value="Arabic" /> Arabic</label><br />
+        <label><input type="radio" name="language" value="French" /> French</label><br />
+
+        <h4>Notifications:</h4>
+        <label><input type="checkbox" name="notification" value="deals" /> New Deals</label><br />
+        <label><input type="checkbox" name="notification" value="meals" /> New Meals</label>
+      </div>
+    </div>
+
+    <!-- Account Section -->
+    <div class="section">
+      <div class="section-title">
+        🔒 Account
+        <button class="toggle-btn">v</button>
+      </div>
+      <div class="section-content hidden">
+        <button id="changePassBtn">Change Password</button>
+        <div id="authSection" class="hidden">
+          <label>Current Password:</label>
+          <input type="password" class="input-change-Pass" id="currentPass" />
+          <span class="eye">👁️</span><br />
+          <button id="authSubmit">Authenticate</button>
+        </div>
+
+        <div id="newPassSection" class="hidden">
+          <label>New Password:</label>
+          <input type="password" class="input-change-Pass" id="newPassword" />
+          <span class="eye">👁️</span><br /><br />
+          <button id="resetPassBtn">Reset Password</button>
+        </div>
+
+        <!-- Payment Methods -->
+        <button id="paymentbtn">Payment Methods</button>
+
+        <!-- Hidden Payment Section -->
+        <div id="paymentsec" class="hidden">
+          <div class="visa-cards">
+            <!-- Visa Cards will dynamically appear here -->
+          </div>
+
+          <button id="addPaymentBtn">Add Payment Method</button>
+        </div>
+
+        <!-- New Payment Method Form -->
+        <div id="newPaymentSec" class="hidden">
+          <h4>Enter Card Details</h4>
+          <label style="display: inline-block; width: 140px;">Card Number:</label>
+          <input type="text" id="cardNumber" /> <br>
+          <label style="display: inline-block; width: 140px;">Cardholder Name:</label>
+          <input type="text" id="cardholderName" /> <br>
+          <label style="display: inline-block; width: 140px;">Expiry Date:</label>
+          <input type="text" id="expiryDate" /> <br>
+          <label style="display: inline-block; width: 140px;">CVV:</label>
+          <input type="text" id="cvv" /> <br>
+          <label style="display: inline-block; width: 140px;">Enter Password:</label>
+          <input type="password" id="paymentPassword" />
+          <span class="eye">👁️</span><br /><br />
+          <button id="submitPayment">Submit</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Logout Button -->
+    <div class="logout-btn">
+      <button id="logoutBtn">Log out</button>
+    </div>
+  </div>
+
+  <!-- Logout Modal -->
+  <div id="logoutModal" class="modal hidden">
+    <div class="modal-content">
+      <p>Are you sure you want to logout?</p>
+      <button id="confirmLogout">Yes</button>
+      <button id="cancelLogout">No</button>
+    </div>
+  </div>
+
+  <script src="Scripts/script-settings.js"></script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="Styles/forgot-pass-style.css" />
+  <title>Reset Password</title>
+</head>
+<body>
+  <div class="edit-pass">
+    <div class="left-side">
+      <p>Reset Your Password</p>
+    </div>
+
+    <div class="right-side">
+      <label class="label">Verification Code</label>
+      <input class="bars" type="text" required />
+
+      <br><br>
+
+      <label class="label">New Password</label>
+      <div class="input-wrapper">
+        <input class="bars" type="password" id="newPassword" />
+        <span class="eye" id="toggleNewPass">👁️</span>
+      </div>
+
+      <br><br>
+
+      <label class="label">Confirm Password</label>
+      <div class="input-wrapper">
+        <input class="bars" type="password" id="confirmPassword" />
+        <span class="eye" id="toggleConfirmPass">👁️</span>
+      </div>
+
+      <div class="all-buttons2">
+        <button id="back-button" type="button" onclick="back()">Back</button>
+        <button id="save-button" onclick="savePassword()">Save</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="Scripts/functions-page3.js"></script>
+</body>
+</html>

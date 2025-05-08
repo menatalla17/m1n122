@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Checkout</title>
+  <link rel="stylesheet" href="Styles/checkout-style.css" />
+</head>
+<body class="light">
+    <div class="container">
+        <div class="checkout-container">
+          <div class="checkout-header">
+            <button class="back-btn">←</button>
+            <h1>Checkout</h1>
+          </div>
+      
+          <div class="order-list" id="orderList">
+            <!-- orders will be loaded here dynamicly -->
+          </div>
+          <div class="total-section">
+            <h2>Total: $<span id="totalPrice">0.00</span></h2>
+          </div>
+
+          <!-- delivary location input section -->
+          <div class="location-section">
+            <label for="location">Delivery Location:</label>
+            <input type="text" id="location" name="location" placeholder="neighborhood / street / building number / flat number" />
+            <p id="location-error" class="error-message" style="display: none;">Please enter the delivery location.</p>
+          </div>
+
+          <div class="payment-options">
+            <button class="pay-btn" id="cashBtn">Pay with Cash</button>
+            <button class="pay-btn" id="cardBtn">Pay with Card</button>
+          </div>
+        </div>
+    </div>
+
+  <script src="Scripts/checkout-script.js"></script>
+</body>
+</html>
