@@ -1,0 +1,290 @@
+:root {
+  --primary-dark: rgb(35, 3, 3); /* Dark brown */
+  --primary-light: #ffffff; /* Light color */
+  --secondary-dark: white;
+  --secondary-light: rgb(35, 3, 3);
+  --accent: #ff4a0e; /* Orange accent */
+  --container-dark: rgb(255, 183, 110); /* Dark container background */
+  --container-light: rgb(255, 221, 174); /* Light container background */
+}
+
+body {
+  margin: 0;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+p{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+body.dark {
+  --primary: var(--primary-dark);
+  --secondary: var(--secondary-dark);
+  --op: var(--primary-light);
+}
+
+body.light {
+  --primary: var(--primary-light);
+  --secondary: var(--secondary-light);
+  --op: var(--primary-dark);
+}
+
+body {
+  background-color: var(--primary);
+  color: var(--secondary);
+  margin: 16px;
+  justify-content: flex;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.section-content button:hover {
+  color: #ff4a0e;
+  background-color: white;
+}
+
+.container {
+  max-width: 700px;
+  margin: 40px auto;
+  background-color: var(--container-dark);
+  padding: 20px 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px var(--container-dark);
+  transition: background-color 0.3s ease;
+}
+
+body.light .container {
+  background-color: var(--container-light);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.back-btn {
+  position: absolute;
+  left: 10px;
+  background: none;
+  border: none;
+  color: var(--op);
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.back-btn:hover {
+  color: #ff4a0e;
+}
+
+.header h1 {
+  font-size: 26px;
+  font-weight: bold;
+  margin: 0;
+  color: var(--op);
+  text-align: center;
+  width: 100%;
+}
+
+.section {
+  margin-bottom: 20px;
+}
+
+.section-title {
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.toggle-btn {
+  background: none;
+  border: none;
+  color: var(--secondary);
+  font-size: 18px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+input[type="password"]::-ms-reveal,
+input[type="password"]::-ms-clear,
+input[type="password"]::-webkit-credentials-auto-fill-button,
+input[type="password"]::-webkit-clear-button {
+  display: none !important;
+}
+
+.eye {
+  cursor: pointer;
+}
+
+.section-content {
+  margin-top: 10px;
+  padding-left: 20px;
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.section-content.visible {
+  display: block;
+  opacity: 1;
+}
+
+input[type="checkbox"],
+input[type="radio"]{
+  accent-color:var(--accent);
+  background-color: transparent;
+  border: none;
+}
+
+input[type="password"],
+input[type="text"] {
+  color: var(--secondary);
+  background-color: transparent;
+  border: 1px solid var(--primary);
+  padding: 8px;
+  border-radius: 8px;
+  position: relative;
+}
+
+input[type="password"] ~ .eye {
+  position: absolute;
+  right: 10px;
+  top: 12px;
+}
+
+button {
+  background: none;
+  border-color: var(--primary);
+  border: solid;
+  padding: 10px 20px;
+  color: var(--secondary);
+  font-weight: bold;
+  border-radius: 20px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#logoutBtn {
+  background: none;
+  border: none;
+  color: var(--secondary);
+  font-size: 16px;
+}
+
+#logoutBtn:hover {
+  color: #ff4a0e;
+  background-color: white;
+}
+
+.modal button:hover {
+  color: #ff4a0e;
+  background-color: white;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden; 
+  opacity: 0;  
+  transition: opacity 0.3s ease, visibility 0s 0.3s;  
+}
+
+.modal.hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.modal .modal-content {
+  background-color: var(--primary);
+  color: var(--secondary);
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+
+body.light .modal-content {
+  background-color: var(--primary-light);
+  color: var(--secondary-light);
+}
+
+body.light .toggle-btn {
+  color: var(--secondary-light);
+}
+
+body.dark .toggle-btn {
+  color: var(--secondary-dark);
+}
+
+
+#newPaymentSec {
+  margin-top: 20px;
+}
+
+#newPaymentSec input {
+  margin-bottom: 10px;
+  max-width: 50%;
+  border-color: var(--secondary);
+}
+
+#submitPayment {
+  background: none;
+  border-color: var(--primary);
+  border: solid;
+  padding: 10px 20px;
+  color: var(--secondary);
+  font-weight: bold;
+  border-radius: 20px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#submitPayment:hover {
+  background-color: #ff4a0e;
+  color: white;
+}
+
+#addPaymentBtn {
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+.visa-card {
+  display: flex;
+  align-items: center;
+  max-width: 50%;
+  margin: 20px 0;
+  border: 1px solid var(--op);
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.visa-card img {
+  width: 80px;
+  height: 55px;
+  margin-right: 15px;
+}
+
+.visa-info p {
+  margin: 0;
+  color: var(--secondary);
+}

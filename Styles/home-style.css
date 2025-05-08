@@ -1,0 +1,259 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', 'Poppins', sans-serif;
+    background-color: #000;
+    color: #fff;
+    font-size: 18px;
+  }
+  
+  h1, h2, h3, p {
+    margin: 0;
+    padding: 8px 0;
+  }
+  
+  /* Header */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 32px;
+    background-color: #000;
+    border-radius: 0 0 10px 10px;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .logo img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+  
+  .logo span {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+  }
+  
+  /* Buttons */
+  button {
+    background-color: #ff4a0e;
+    color: #ffffff;
+    padding: 9.6px 19.2px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  button:hover {
+    background-color: #ffffff;
+    color: #ff4a0e;
+    transform: scale(1.05);
+  }
+  
+  /* Welcome Section */
+  .welcome-section {
+    background-color: #1a1a1a;
+    text-align: center;
+    padding: 64px 32px;
+    border-radius: 0 0 20px 20px;
+  }
+  
+  .welcome-section h1 {
+    font-size: 44.8px;
+    color: #ff4a0e;
+  }
+  
+  .welcome-section p {
+    font-size: 19.2px;
+    color: #ddd;
+  }
+  
+  /* Hero */
+  .why-choose-us {
+    padding: 32px 16px 0;
+    background-color: #111;
+    text-align: center;
+  }
+  
+  .hero-carousel {
+    position: relative;
+    height: 90vh;
+    overflow: hidden;
+    border-radius: 20px;
+    margin: 16px;
+  }
+  
+  .slide {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: all 1s ease;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 5%;
+  }
+  
+  .slide img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+    border-radius: 20px;
+  }
+  
+  .slide::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: linear-gradient(to right, rgba(0,0,0,0.6), rgba(0,0,0,0.1), rgba(0,0,0,0));
+    border-radius: 20px;
+  }
+  
+  .slide .text {
+    max-width: 600px;
+    text-align: left;
+    font-size: 20.8px;
+    padding: 31.590px;
+  }
+  
+  .slide .text h1 {
+    font-size: 43.2px;
+    color: #ffffff;
+  }
+  
+  .slide.active {
+    left: 0;
+    opacity: 1;
+    z-index: 1;
+  }
+  
+  /* Top Dishes */
+  .top-dishes {
+    background-color: #fff;
+    color: #000;
+    padding: 48px 32px;
+    text-align: center;
+    border-radius: 20px 20px 0 0;
+  }
+
+  .top-dishes h2{
+    font-size: 32px;
+  }
+  
+  .card-container {
+    display: flex;
+    gap: 32px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 32px;
+  }
+  
+  /* New Card Style */
+  .card {
+    width: 300px;
+    height: 200px;
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    transition: height 0.4s ease;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .card:hover {
+    height: 390px;
+  }
+  
+  .card-image {
+    height: 200px;
+    overflow: hidden;
+    transition: transform 0.4s ease;
+  }
+  
+  .card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  
+  .card-info {
+    padding: 20px;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(50px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+  }
+  
+  .card:hover .card-info {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+  
+  .card-info h2 {
+    font-size: 20px;
+    color: #ff4a0e;
+    margin-bottom: 10px;
+  }
+  
+  .card-info p {
+    font-size: 14px;
+    color: #663c00;
+    margin-bottom: 10px;
+  }
+  
+  .price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ff4a0e;
+  }
+  
+  .stars {
+    color: #ffc756;
+  }
+  
+  .bottom-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #111;
+    color: white;
+    padding: 32px 16px;
+    text-align: center;
+    border-radius: 20px 20px 0 0;
+  }
+
+  footer .contact {
+    margin-bottom: 16px;
+  }
+  
+  .contact div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .contact img{
+    width: 32px;
+    margin-right: 5px;
+  }

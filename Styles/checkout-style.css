@@ -1,0 +1,117 @@
+:root {
+  --primary: #ffffff;
+  --secondary: #000000;
+  --accent: #ff4a0e;
+}
+
+body {
+  background-color: var(--primary);
+  color: var(--secondary);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+
+.checkout-container {
+  max-width: 700px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: var(--primary);
+  border: 1px solid #e0e0e0; 
+  border-radius: 12px; 
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
+}
+
+
+.checkout-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.back-btn {
+  position: absolute;
+  left: 0;
+  background: none;
+  border: none;
+  color: var(--secondary);
+  font-size: 32px;
+  cursor: pointer;
+}
+
+.back-btn:hover {
+  color: var(--accent);
+}
+
+.checkout-header h1 {
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.order-list {
+  margin-bottom: 30px;
+}
+
+.order-item {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--accent);
+  padding: 10px 0;
+}
+
+.total-section {
+  text-align: right;
+  margin-bottom: 30px;
+}
+
+.total-section h2 {
+  font-size: 22px;
+}
+
+.payment-options {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.pay-btn {
+  background: none;
+  border: 2px solid var(--accent);
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-weight: bold;
+  color: var(--secondary);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.pay-btn:hover {
+  background-color: var(--accent);
+  color: var(--primary);
+}
+
+.location-section {
+  margin-bottom: 20px;
+}
+
+.location-section label {
+  font-size: 18px;
+  color: var(--secondary);
+}
+
+.location-section input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top: 8px;
+}
+
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+}
